@@ -1,11 +1,11 @@
 // ==UserScript==
-// @name         Divokekmeny.cz DarkMode
+// @name         dark-moid
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      2024-07-22
 // @description  try to take over the world!
-// @author       Litz
-// @match        https://*.divokekmeny.cz/*
-// @icon         https://b.thumbs.redditmedia.com/1l0qG91U_lSzE-4gEGrE2cNeXMVTBeFQ0Hvjes3VYsE.png
+// @author       You
+// @match        https://*.tribalwars.net/*
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=tribalwars.net
 // @grant        none
 // ==/UserScript==
 
@@ -95,6 +95,63 @@ function addGlobalStyle(css) {
   color: #000;
 }
 
+  td.shadow div.rightshadow, td.shadow div.leftshadow {
+        background: none;
+    }
+
+.vis td,
+.vis_item {
+  background:#0000;
+}
+
+input,
+select {
+  font-size:8pt;
+  background: #0006;
+  border-radius: 20px;
+  border: 0px;
+  color: white;
+  text-align: center;
+  padding: 6px;
+}
+
+.scavenge-option {
+  min-width: 180px;
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+  vertical-align: top;
+  background-color: rgba(240, 226, 190, 0);
+}
+
+.btn,
+.btn-default {
+  background: #0006;
+  padding: 4px;
+}
+
+#info_content {
+  background-color: #0000009c;
+  width: auto;
+}
+
+th,
+.vis > h4 {
+  font-size: 9pt;
+  text-align: left;
+  font-weight:700;
+  background-image: none;
+  background-repeat: repeat-x;
+  position: relative;
+}
+
+.report-preview {
+  color: black;
+}
+
+.report-preview {
+  border: none;
+}
 
 `);
 
@@ -126,6 +183,8 @@ function addGlobalStyle(css) {
     addGlobalStyle('.quest {	width: 25px;	height: 25px;	border: 0px solid #603000;	background-color: #5b5b5b;	margin: 10px;	background-position: center;	background-repeat: no-repeat;	cursor: pointer;	position: relative;	text-align: center;	box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 2px;	border-radius: 3px;}');
     addGlobalStyle('.quest_new {	text-align: center;	font-family: "Segoe UI", Tahoma, Verdana, Arial;	font-size: 9px;	font-weight: bold;	border: 1px solid #fff;	background-color: transparent;	border-radius: 6px;	height: 13px;	width: 34px;	position: absolute;	top: 20px;	left: -14px;	color: #fff;	z-index: 1000;}');
 
+
+
     document.body.style.background = _gray;
     document.getElementsByClassName("server_info")[0] .style.background= _DarkGray;
 
@@ -141,6 +200,5 @@ function addGlobalStyle(css) {
         document.getElementsByClassName("bg_right")[i] .style.background= "none";
     }
 })();
-
 
 
