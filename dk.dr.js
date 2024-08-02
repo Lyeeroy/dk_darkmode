@@ -195,10 +195,20 @@ th,
 
 
 
-    for (let i = 0; i < 3; i++) {
-        document.getElementsByClassName("bg_left")[i] .style.background= "none";
-        document.getElementsByClassName("bg_right")[i] .style.background= "none";
+    const bg_left_elements = document.getElementsByClassName("bg_left");
+    const bg_right_elements = document.getElementsByClassName("bg_right");
+
+    if (bg_left_elements.length > 0 && bg_right_elements.length > 0) {
+        for (let i = 0; i < 3; i++) {
+            if (bg_left_elements[i]) {
+                bg_left_elements[i].style.background = "none";
+            }
+            if (bg_right_elements[i]) {
+                bg_right_elements[i].style.background = "none";
+            }
+        }
     }
+
 })();
 
 
