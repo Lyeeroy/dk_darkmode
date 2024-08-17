@@ -147,21 +147,21 @@ function darkenColor(hex, percent) {
     /* Custom edit */
     #menu_row > td.menu-item > a { background: transparent; font-size: 11px; }
     #topdisplay .menu_column .menu-column-item a { display: block; position: relative; left: -20px; padding: 3px 12px 3px 20px; margin: 0 -10px 0 0; background: ${background_color}; color: #FFF; float: none; height: auto; text-align: left; }
-    .topbar .corner, .reward-tab-content, .reward-descriptions, .quests, #map_search .target-input, #map_search .target-input input[type=text], .spoiler div, .labeled-box-content, .empty-hint, .inventory_search, #attack_spy_buildings_left, #attack_spy_buildings_right  { background: ${background_color}; }
+    .topbar .corner, .reward-tab-content, .reward-descriptions, .quests, #map_search .target-input, #map_search .target-input input[type=text], .spoiler div, .labeled-box-content, .empty-hint, .inventory_search, #attack_spy_buildings_left, #attack_spy_buildings_right { background: ${background_color}; }
     #content_value { color: ${text_color}; }
     th, .vis > h4, .igmline { color: ${header_font_color}; background: linear-gradient(to bottom, ${header_color1}, ${header_color2});}
     th { color: ${text_color}; background-color: ${background_color}, background: transparent; }
     .maincell table {margin-top: 5px}
     img.widget-button {background: ${buttons_color}; filter: brightness(0%); margin-top: 4px; height: 2px; width: 14px;}
-    .target-input, .inventory_search {border: none;}
+    .target-input, .inventory_search, map#map {border: none;}
     #footer, .visual-label  { background: ${background_color}; box-shadow: 0px 0px 5px ${decorative_color};}
     select.input-nicer {height: 35px;}
     .flag_box, .target-input {background-color: transparent; }
 
     /* Transparent */
     .world_button_active, .bg_left, .bg_right, .top_shadow, #tooltip, .topbar .decoration, .bottom, #plunder_list_filters, .award-group-head, .award-group-foot, .quest-popup-navbar, .quest-popup-navbar > ul > li > a, .quest-popup-navbar > ul > li:hover > a, .quest-popup-navbar > ul > li.selected-tab > a, li.selected-tab > a, .quest-popup-navbar > ul > li  { background: transparent; }
-/* Home page */
-.bg-top, .left.register, .right.login { background: ${background_color}; }
+    /* Home page */
+    .bg-top, .left.register, .right.login { background: ${background_color}; }
 
   `);
 
