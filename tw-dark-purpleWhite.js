@@ -66,34 +66,34 @@
   purple: "#C4A4FC",
   darkerPurple: "#AE92E0",
 };
-
-
+  
   const background_color = COLORS.darkGray; //Background
+
   const text_color = COLORS.lightGray; // Non href text
-  const aColor = COLORS.purple; // HREFs
+  const aColor = COLORS.dustyRose; // HREFs
 
-  const hover_color = COLORS.darkGray; //btn hovers
-  const buttons_color = COLORS.purple; //Buttons + some fonts
+  const hover_color = COLORS.dustyRose; // btn hovers
+  const buttons_color = COLORS.smokeBlack; //Buttons + some fonts
 
-  const decorative_color = COLORS.lavender; // borders, candy eye
+  const decorative_color = COLORS.dustyRose; // borders (candy eye)
 
-  const header_color1 = COLORS.purple; //header grad
-  const header_color2 = darkenColor(COLORS.purple, 20); //header grad
-  const header_font_color = COLORS.darkGray; // header font
+  const header_color1 = COLORS.dustyRose; //header grad 1
+  const header_color2 = darkenColor(COLORS.dustyRose, 20); //header grad 2
+  const header_font_color = COLORS.smokeBlack; // header font
 
 
 function darkenColor(hex, percent) {
-  // Convert hex to RGB
+
   let r = parseInt(hex.slice(1, 3), 16);
   let g = parseInt(hex.slice(3, 5), 16);
   let b = parseInt(hex.slice(5, 7), 16);
 
-  // Calculate the amount to darken
+
   r = Math.max(0, Math.min(255, Math.floor(r * (1 - percent / 100))));
   g = Math.max(0, Math.min(255, Math.floor(g * (1 - percent / 100))));
   b = Math.max(0, Math.min(255, Math.floor(b * (1 - percent / 100))));
 
-  // Convert back to hex
+
   return `#${((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase()}`;
 }
 
@@ -112,13 +112,13 @@ function darkenColor(hex, percent) {
     Array.from(elements).forEach((el) => Object.assign(el.style, styles));
   }
 
-  // Initialize MutationObserver to detect changes in the DOM
+
   new MutationObserver(() => {
     applyStyles(document.querySelectorAll("td, h4, th"), {
       color: text_color,
       background: background_color,
       borderColor: background_color,
-      backgroundImage: "none", // Hide the background image
+      backgroundImage: "none",
     });
     applyStyles(document.querySelectorAll("a"), {
       color: aColor,
@@ -147,21 +147,21 @@ function darkenColor(hex, percent) {
     /* Custom edit */
     #menu_row > td.menu-item > a { background: transparent; font-size: 11px; }
     #topdisplay .menu_column .menu-column-item a { display: block; position: relative; left: -20px; padding: 3px 12px 3px 20px; margin: 0 -10px 0 0; background: ${background_color}; color: #FFF; float: none; height: auto; text-align: left; }
-    .topbar .corner, .reward-tab-content, .reward-descriptions, .quests, #map_search .target-input, #map_search .target-input input[type=text], .spoiler div, .labeled-box-content, .empty-hint, .inventory_search, #attack_spy_buildings_left, #attack_spy_buildings_right { background: ${background_color}; }
+    .topbar .corner, .reward-tab-content, .reward-descriptions, .quests, #map_search .target-input, #map_search .target-input input[type=text], .spoiler div, .labeled-box-content, .empty-hint, .inventory_search, #attack_spy_buildings_left, #attack_spy_buildings_right, img#unit_image, .popup_content, .shared_forum { background: ${background_color}; }
     #content_value { color: ${text_color}; }
-    th, .vis > h4, .igmline { color: ${header_font_color}; background: linear-gradient(to bottom, ${header_color1}, ${header_color2});}
+    th, .vis > h4, .igmline, .popup_menu { color: ${header_font_color}; background: linear-gradient(to bottom, ${header_color1}, ${header_color2});}
     th { color: ${text_color}; background-color: ${background_color}, background: transparent; }
-    .maincell table {margin-top: 8px}
+    .maincell table {margin-top: 5px}
     img.widget-button {background: ${buttons_color}; filter: brightness(0%); margin-top: 4px; height: 2px; width: 14px;}
-    .target-input, .inventory_search, map#map {border: none;}
+    .target-input, .inventory_search, .ally-reasons-to-join .reasons .content, .ally-reasons-to-join .reasons .header {border: none;}
     #footer, .visual-label  { background: ${background_color}; box-shadow: 0px 0px 5px ${decorative_color};}
     select.input-nicer {height: 35px;}
     .flag_box, .target-input {background-color: transparent; }
 
     /* Transparent */
     .world_button_active, .bg_left, .bg_right, .top_shadow, #tooltip, .topbar .decoration, .bottom, #plunder_list_filters, .award-group-head, .award-group-foot, .quest-popup-navbar, .quest-popup-navbar > ul > li > a, .quest-popup-navbar > ul > li:hover > a, .quest-popup-navbar > ul > li.selected-tab > a, li.selected-tab > a, .quest-popup-navbar > ul > li  { background: transparent; }
-    /* Home page */
-    .bg-top, .left.register, .right.login { background: ${background_color}; }
+/* Home page */
+.bg-top, .left.register, .right.login, .ally-reasons-to-join .reasons .content, .ally-reasons-to-join .reasons .header, .report_transparent_overlay  { background: ${background_color}; }
 
   `);
 
@@ -182,11 +182,11 @@ function darkenColor(hex, percent) {
     input, select { font-size: 8pt; background: #000; border-radius: 20px; border: 2px solid ${decorative_color}; color: ${decorative_color}; text-align: center; padding: 6px; box-shadow: 0px 0px 10px ${decorative_color}; }
 
     /* Info and Report Boxes - background-color, border, color, box-shadow */
-    #info_content, .report-preview-content, .report-preview, .info_box, .post, #tooltip, .tooltip-style, .tooltip-style.command-details { background-color: ${background_color}; border: 2px solid ${decorative_color}; color: ${decorative_color}; box-shadow: 0px 0px 10px ${decorative_color}; }
+    div.form , #info_content, .report-preview-content, .report-preview, .info_box, .post, #tooltip, .tooltip-style, .tooltip-style.command-details { background-color: ${background_color}; border: 2px solid ${decorative_color}; color: ${decorative_color}; box-shadow: 0px 0px 10px ${decorative_color}; }
 
     /* Other Styling - background-color, border-color, color */
     .scavenge-option, .map_container, .premium-advantage .advantage-content, .post, .popup_box_content,
-    .event-area, .desktop #event_tribeless_content,.map-legend-container table, .lit .lit-item, .selected, .selected td, .quest, .row h4, .premium_account_hint.main, .inventory_detail, .inventory_items, .item_container .item, .item_container { background-color: ${background_color}; border-color: ${decorative_color}; color: ${text_color}; }
+    .popup_style, .event-area, .desktop #event_tribeless_content,.map-legend-container table, .lit .lit-item, .selected, .selected td, .quest, .row h4, .premium_account_hint.main, .inventory_detail, .inventory_items, .item_container .item, .item_container { background-color: ${background_color}; border-color: ${decorative_color}; color: ${text_color}; }
 
     /* Map - border, box-shadow */
     #map { width: 600px; height: 500px; border: 2px solid ${decorative_color}; box-shadow: 0px 0px 20px ${decorative_color}; }
