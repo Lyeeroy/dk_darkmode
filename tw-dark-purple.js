@@ -66,6 +66,7 @@
   purple: "#C4A4FC",
   darkerPurple: "#AE92E0",
 };
+  
   const background_color = COLORS.darkGray; //Background
 
   const text_color = COLORS.lightGray; // Non href text
