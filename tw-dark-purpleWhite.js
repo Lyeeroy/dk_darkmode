@@ -68,18 +68,18 @@
 };
   
   const background_color = COLORS.darkGray; //Background
-
+  
   const text_color = COLORS.lightGray; // Non href text
-  const aColor = COLORS.dustyRose; // HREFs
+  const aColor = COLORS.purple; // HREFs
 
-  const hover_color = COLORS.dustyRose; // btn hovers
-  const buttons_color = COLORS.smokeBlack; //Buttons + some fonts
+  const hover_color = COLORS.darkGray; //btn hovers
+  const buttons_color = COLORS.purple; //Buttons + some fonts
 
-  const decorative_color = COLORS.dustyRose; // borders (candy eye)
+  const decorative_color = COLORS.lavender; // borders, candy eye
 
-  const header_color1 = COLORS.dustyRose; //header grad 1
-  const header_color2 = darkenColor(COLORS.dustyRose, 20); //header grad 2
-  const header_font_color = COLORS.smokeBlack; // header font
+  const header_color1 = COLORS.purple; //header grad
+  const header_color2 = darkenColor(COLORS.purple, 20); //header grad
+  const header_font_color = COLORS.darkGray; // header font
 
 
 function darkenColor(hex, percent) {
