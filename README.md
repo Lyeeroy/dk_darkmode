@@ -1,7 +1,7 @@
 
 # Dark Mode for TribalWars
 
-This Tampermonkey script activates dark mode on websites. The code is messy and not perfect, as I wrote it while learning JavaScript, but it generally works.
+This Tampermonkey script enables dark mode on websites. The script certainly is not perfect but it works.
 
 ## Installation
 
@@ -15,5 +15,5 @@ This Tampermonkey script activates dark mode on websites. The code is messy and 
    - Select "Create a new script".
    - Copy and paste the following code into the editor and hit ctrl+s
 
- ![alt text]( https://i.imgur.com/SYgh0oI.png "1")
- ![alt text]( https://i.imgur.com/i06Y02X.png "2")
+ ![alt text]( https://i.imgur.com/2p2HD9n.png "1")
+ ![alt text]( https://i.imgur.com/ErVdXLo.png "2")
