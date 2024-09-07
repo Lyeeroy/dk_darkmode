@@ -2,7 +2,7 @@
 // @name         Troop Recruiter
 // @namespace    http://tampermonkey.net/
 // @version      2024-09-07
-// @description  Calculate and fill troop recruitment based on available materials while balancing wood and iron usage.
+// @description  Calculate and fill troop recruitment based on available materials while balancing wood and iron usage. URL: https://<sever>.tribalwars.net/game.php?village=<villageID>&screen=train
 // @author       Add URL in this format:
 // @match        https://*.tribalwars.net/*
 // @match        https://*.tribalwars.uk/*
@@ -16,6 +16,7 @@
 // @include      https://*.tribalwars.com.pt/*
 // @include      https://*.tribalwars.com.br/*
 // @include      https://*.tribalwars.us/*
+// @icon         https://www.google.com/s2/favicons?sz=64&domain=tribalwars.net
 // @grant        none
 // ==/UserScript==
 
